@@ -1,0 +1,17 @@
+ul{
+display:flex;
+flex-direction: row;
+list-style:none;
+}
+
+li{
+margin:0px 5px 0px 10px;
+}
+
+a{
+    text-decoration: none;
+    color:black;
+}
+a:hover{
+    color:#EC9033;
+}

@@ -1,0 +1,44 @@
+.skill-header-container {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 500px;
+  /* background-color: rgb(182, 178, 178); */
+}
+.generalities {
+  color: rgb(20, 20, 20);
+  font-size: 35px;
+  text-align: center;
+  margin: 20px 0px 10px 0px;
+  line-height: 1.4;
+}
+.surname {
+  text-decoration: underline;
+  -webkit-text-decoration-color: orange; /* safari still uses vendor prefix */
+  text-decoration-color: orange;
+  font-weight: 700;
+}
+.description {
+  color: rgb(20, 20, 20);
+  font-size: 20px;
+  letter-spacing: 1px;
+  font-weight: 100;
+  text-align: center;
+}
+
+.image {
+  position: absolute;
+  bottom: 0;
+  object-fit: cover;
+  width: 380px;
+  height: 266px;
+  z-index: 4;
+}
+.skills-container {
+  /* background-color: blue; */
+  height: 350px;
+  width: 100%;
+  z-index: -1;
+}

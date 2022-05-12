@@ -1,0 +1,74 @@
+.ball-image {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  margin: auto;
+}
+.bouncer-holder {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+}
+
+.bouncer-holder {
+  -webkit-animation: travel 12s ease-in infinite alternate;
+  -o-animation: travel 12s ease-in infinite alternate;
+  animation: travel 12s ease-in infinite alternate;
+}
+
+.bouncer {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  bottom: 0;
+  border-radius: 50%;
+  height: 60px;
+  width: 60px;
+  background: #ffffff;
+  -webkit-animation: bounce 6.5s infinite;
+  -o-animation: bounce 6.5s infinite;
+  animation: bounce 6.5s infinite;
+}
+
+@-webkit-keyframes travel {
+  from {
+    left: 0;
+  }
+  to {
+    left: calc(100% - 30px);
+  }
+}
+
+@keyframes travel {
+  from {
+    left: 0;
+  }
+  to {
+    left: calc(100% - 30px);
+  }
+}
+
+@-webkit-keyframes bounce {
+  from,
+  to {
+    bottom: 0;
+    -webkit-animation-timing-function: ease-out;
+  }
+  50% {
+    bottom: 220px;
+    -webkit-animation-timing-function: ease-in;
+  }
+}
+@keyframes bounce {
+  from,
+  to {
+    bottom: 0;
+    animation-timing-function: ease-out;
+  }
+  50% {
+    bottom: calc(100% - 30px);
+    animation-timing-function: ease-in;
+  }
+}

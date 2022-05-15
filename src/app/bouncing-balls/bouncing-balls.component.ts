@@ -6,6 +6,8 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./bouncing-balls.component.css']
 })
 export class BouncingBallsComponent implements OnInit {
+  myScriptElement: HTMLScriptElement;
+
   @Input() public top: string; 
   @Input() public bottom: string; 
   @Input() public left: string; 
@@ -13,7 +15,13 @@ export class BouncingBallsComponent implements OnInit {
   @Input() public icon: string; 
   @Input() public width: string; 
   @Input() public height: string; 
-  constructor() { }
+
+  constructor() { 
+    this.myScriptElement = document.createElement("script");
+    this.myScriptElement.src = "assets/js/balls.js"
+    document.body.appendChild(this.myScriptElement);
+
+  }
 
   ngOnInit(): void {
     console.log(this.top);

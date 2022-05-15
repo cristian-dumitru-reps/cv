@@ -38,13 +38,21 @@ class Circle {
   
   draw() {
     const { x, y, r, color,z } = this
-    ctx.drawImage(thumbImg, 0, 0, 50, 50);
     ctx.beginPath()
-    ctx.arc(x, y, r, 0, Math.PI * 2)
     
-    ctx.fillStyle = color
-    ctx.fill()
-    ctx.drawImage(thumbImg, 0, 0, 10, 10);
+    ctx.save();
+    ctx.beginPath();
+    ctx.arc(x,y, r, 0, 2 * Math.PI);
+    
+    ctx.strokeStyle = "#2465D3";
+    ctx.stroke();
+    ctx.clip();
+    
+    ctx.drawImage(thumbImg, x, y,  r,  r);
+    ctx.restore();
+    //ctx.fillStyle = color
+    //ctx.fill()
+    ctx.stroke();
 
     ctx.closePath()
   }

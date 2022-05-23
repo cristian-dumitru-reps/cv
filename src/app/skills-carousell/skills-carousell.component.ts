@@ -14,7 +14,7 @@ export class SkillsCarousellComponent implements OnInit {
 
 
   selectPage(index:String){
-    console.log("Sono dentro il selectPage");
+    console.log("Sono dentro il selectPage con indice:" + index);
     // this.index_page = 1;
     // this.index_page = 2;
     // this.index_page = 3;

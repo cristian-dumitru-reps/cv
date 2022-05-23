@@ -1,44 +1,72 @@
 <!-- Left Side: Image / Right Side: Text -->
 <div class="left-navbar">
   <ul>
-    <li ><a href="#"><i class="fa fa-user fa-1.5x"></i> Frontend</a>
-    <ul>
-      <li ><a href="#"><i class="fa fa-user fa-1.5x"></i> Angular</a></li>
-      <li ><a href="#"><i class="fa fa-user fa-1.5x"></i> React</a></li>
-      <li ><a href="#"><i class="fa fa-user fa-1.5x"></i> Java</a></li>
-      <li ><a href="#"><i class="fa fa-user fa-1.5x"></i> HTML & CSS</a></li>
-    </ul>
+    <li>
+      <a href="#"><i class="fa fa-user fa-1.5x"></i> Frontend</a>
+      <ul>
+        <li (click)="selectPage('Web')" style="margin: 5px 5px 5px -20px">
+          <a href="#"><i class="fa fa-user fa-1.5x"></i> Web</a>
+        </li>
+        <li (click)="selectPage('Mobile')" style="margin: 5px 5px 5px -20px">
+          <a href="#"><i class="fa fa-mobile fa-1.5x"></i> Mobile</a>
+        </li>
+        <li (click)="selectPage('Desktop')" style="margin: 5px 5px 5px -20px">
+          <a href="#"><i class="fa fa-desktop fa-1.5x"></i> Desktop</a>
+        </li>
+      </ul>
     </li>
-    <li ><a href="#"><i class="fa fa-user fa-1.5x"></i> Backend</a></li>
-    <li ><a href="#"><i class="fa fa-user fa-1.5x"></i> UI/UX Design</a></li>
-    <li ><a href="#"><i class="fa fa-user fa-1.5x"></i> Copywriting</a></li>
+    <li>
+      <a href="#"><i class="fa fa-user fa-1.5x"></i> Backend</a>
+      <ul>
+        <li (click)="selectPage('Framework')" style="margin: 5px 5px 5px -20px">
+          <a href="#"><i class="fa fa-user fa-1.5x"></i> Framework</a>
+        </li>
+        <li (click)="selectPage('Database')" style="margin: 5px 5px 5px -20px">
+          <a href="#"><i class="fa fa-database fa-1.5x"></i> Database</a>
+        </li>
+      </ul>
+    </li>
+    <li>
+      <a href="#"><i class="fa fa-image fa-1.5x"></i> UI & UX</a>
+      <ul>
+        <li (click)="selectPage('Software')" style="margin: 5px 5px 5px -20px">
+          <a href="#"><i class="fa fa-user fa-1.5x"></i> Software</a>
+        </li>
+      </ul>
+    </li>
+    <li (click)="selectPage('Copywriting')">
+      <a href="#"><i class="fa fa-user fa-1.5x"></i> Copywriting</a>
+    </li>
+    <li (click)="selectPage('Management')">
+      <a href="#"><i class="fa fa-user fa-1.5x"></i> Management</a>
+    </li>
+    <li (click)="selectPage('Marketing')">
+      <a href="#"><i class="fa fa-user fa-1.5x"></i> Marketing</a>
+    </li>
   </ul>
   <div class="road-map-container">
     <div class="road-map-line"></div>
   </div>
   <div class="paragraph">
-    Lorem ipsum bla bla blaLorem ipsum bla bla blaLorem ipsum bla bla blaLorem
-    ipsum bla bla blaLorem ipsum bla bla blaLorem ipsum bla bla blaLorem ipsum
-    bla bla blaLorem ipsum bla bla blaLorem ipsum bla bla blaLorem ipsum bla bla
-    bla<br />
-    Lorem ipsum bla bla blaLorem ipsum bla bla blaLorem ipsum bla bla blaLorem
-    ipsum bla bla blaLorem ipsum bla bla blaLorem ipsum bla bla blaLorem ipsum
-    bla bla blaLorem ipsum bla bla blaLorem ipsum bla bla blaLorem ipsum bla bla
-    bla<br />
-    
+    <p class="section-title">Web Development</p>
+    <p class="section-paragraph">
+      Writing things about me so you know how good I'm at pretending I'm doing
+      my job. So figo so beo so fotomodeo more ghesboro, Veneto-Rumeno in the
+      building che ti sviluppa anche tua madre <br />
+      Figa la descrizione di sto tizio, prima lo assumo poi lo denuncio.
+    </p>
   </div>
-  <!-- <div class="road-map-container">
-    <div class="road-map-line"></div>
-  </div> -->
-  <!-- <div class="skills-circle-container">
+  <div class="road-map-container">
+    <div style="margin: 15px 0px 15px 10px" class="road-map-line"></div>
+  </div>
+  <div class="skills-circle-container">
     <div class="skill-circle-container"></div>
     <div class="skill-circle-container"></div>
     <div class="skill-circle-container"></div>
     <div class="skill-circle-container"></div>
     <div class="skill-circle-container"></div>
-  </div> -->
+  </div>
 </div>
-
 
 <!-- <!DOCTYPE html>
 <html>

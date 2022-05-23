@@ -23,7 +23,7 @@
 .experiences-container {
   display: flex;
   /* justify-content: center; */
-  width: 800px;
+  width: 950px;
   background-color: rgb(255, 255, 255);
   border-radius: 10px;
 }

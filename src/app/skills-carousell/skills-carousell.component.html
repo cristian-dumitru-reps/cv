@@ -1,46 +1,66 @@
 <!-- Left Side: Image / Right Side: Text -->
 <div class="left-navbar">
   <ul>
-    <li>
+    <li id="frontend" (click)="hideSubMenu($event)">
       <a href="#"><i class="fa fa-user fa-1.5x"></i> Frontend</a>
       <ul>
-        <li (click)="selectPage('Web')" style="margin: 5px 5px 5px -20px">
+        <li
+          id="web"
+          (click)="selectPage($event)"
+          style="margin: 15px 5px 5px -20px"
+        >
           <a href="#"><i class="fa fa-user fa-1.5x"></i> Web</a>
         </li>
-        <li (click)="selectPage('Mobile')" style="margin: 5px 5px 5px -20px">
+        <li
+          id="mobile"
+          (click)="selectPage($event)"
+          style="margin: 15px 5px 5px -20px"
+        >
           <a href="#"><i class="fa fa-mobile fa-1.5x"></i> Mobile</a>
         </li>
-        <li (click)="selectPage('Desktop')" style="margin: 5px 5px 5px -20px">
+        <li
+          id="desktop"
+          (click)="selectPage($event)"
+          style="margin: 15px 5px 5px -20px"
+        >
           <a href="#"><i class="fa fa-desktop fa-1.5x"></i> Desktop</a>
         </li>
       </ul>
     </li>
-    <li>
+    <li id="backend" (click)="hideSubMenu($event)">
       <a href="#"><i class="fa fa-user fa-1.5x"></i> Backend</a>
       <ul>
-        <li (click)="selectPage('Framework')" style="margin: 5px 5px 5px -20px">
+        <li
+          id="framework"
+          (click)="selectPage($event)"
+          style="margin: 15px 5px 5px -20px"
+        >
           <a href="#"><i class="fa fa-user fa-1.5x"></i> Framework</a>
         </li>
-        <li (click)="selectPage('Database')" style="margin: 5px 5px 5px -20px">
+        <li
+          id="database"
+          (click)="selectPage($event)"
+          style="margin: 15px 5px 5px -20px"
+        >
           <a href="#"><i class="fa fa-database fa-1.5x"></i> Database</a>
         </li>
       </ul>
     </li>
-    <li>
+    <li id="uix" (click)="hideSubMenu($event)">
       <a href="#"><i class="fa fa-image fa-1.5x"></i> UI & UX</a>
       <ul>
-        <li (click)="selectPage('Software')" style="margin: 5px 5px 5px -20px">
+        <li (click)="selectPage($event)" style="margin: 15px 5px 5px -20px">
           <a href="#"><i class="fa fa-user fa-1.5x"></i> Software</a>
         </li>
       </ul>
     </li>
-    <li (click)="selectPage('Copywriting')">
+    <li id="copywriting" (click)="selectPage($event)">
       <a href="#"><i class="fa fa-user fa-1.5x"></i> Copywriting</a>
     </li>
-    <li (click)="selectPage('Management')">
+    <li id="management" (click)="selectPage($event)">
       <a href="#"><i class="fa fa-user fa-1.5x"></i> Management</a>
     </li>
-    <li (click)="selectPage('Marketing')">
+    <li id="marketing " (click)="selectPage($event)">
       <a href="#"><i class="fa fa-user fa-1.5x"></i> Marketing</a>
     </li>
   </ul>
@@ -48,7 +68,11 @@
     <div class="road-map-line"></div>
   </div>
   <div class="paragraph">
-    <p class="section-title">Web Development</p>
+    <p class="section-title">Frontend</p>
+    <p class="section-paragraph">
+      Writing things about me so you know how good I'm at pretending I'm doing
+      my job. So figo so beo so fotomodeo more ghesboro, Veneto-Rumeno in the
+    </p>
     <p class="section-paragraph">
       Writing things about me so you know how good I'm at pretending I'm doing
       my job. So figo so beo so fotomodeo more ghesboro, Veneto-Rumeno in the
@@ -60,121 +84,17 @@
     <div style="margin: 15px 0px 15px 10px" class="road-map-line"></div>
   </div>
   <div class="skills-circle-container">
-    <div class="skill-circle-container"></div>
-    <div class="skill-circle-container"></div>
-    <div class="skill-circle-container"></div>
-    <div class="skill-circle-container"></div>
-    <div class="skill-circle-container"></div>
-  </div>
-</div>
-
-<!-- <!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
-body {
-  font-family: Arial, Helvetica, sans-serif;
-  margin: 0;
-}
-
-.navbar {
-  overflow: hidden;
-  background-color: #333; 
-}
-
-.navbar a {
-  float: left;
-  font-size: 16px;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-.subnav {
-  float: left;
-  overflow: hidden;
-}
-
-.subnav .subnavbtn {
-  font-size: 16px;  
-  border: none;
-  outline: none;
-  color: white;
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit;
-  margin: 0;
-}
-
-.navbar a:hover, .subnav:hover .subnavbtn {
-  background-color: red;
-}
-
-.subnav-content {
-  display: none;
-  position: absolute;
-  left: 0;
-  background-color: red;
-  width: 100%;
-  z-index: 1;
-}
-
-.subnav-content a {
-  float: left;
-  color: white;
-  text-decoration: none;
-}
-
-.subnav-content a:hover {
-  background-color: #eee;
-  color: black;
-}
-
-.subnav:hover .subnav-content {
-  display: block;
-}
-</style>
-</head>
-<body>
-
-<div class="navbar">
-  <a href="#home">Home</a>
-  <div class="subnav">
-    <button class="subnavbtn">About <i class="fa fa-caret-down"></i></button>
-    <div class="subnav-content">
-      <a href="#company">Company</a>
-      <a href="#team">Team</a>
-      <a href="#careers">Careers</a>
+    <div class="skill-circle-container">
+      <img class="icon-skill" src="assets\images\angular_skill_icon.png" />
     </div>
-  </div> 
-  <div class="subnav">
-    <button class="subnavbtn">Services <i class="fa fa-caret-down"></i></button>
-    <div class="subnav-content">
-      <a href="#bring">Bring</a>
-      <a href="#deliver">Deliver</a>
-      <a href="#package">Package</a>
-      <a href="#express">Express</a>
+    <div class="skill-circle-container">
+      <img class="icon-skill" src="assets\images\react_skill_icon.png" />
     </div>
-  </div> 
-  <div class="subnav">
-    <button class="subnavbtn">Partners <i class="fa fa-caret-down"></i></button>
-    <div class="subnav-content">
-      <a href="#link1">Link 1</a>
-      <a href="#link2">Link 2</a>
-      <a href="#link3">Link 3</a>
-      <a href="#link4">Link 4</a>
+    <div class="skill-circle-container">
+      <img class="icon-skill" src="assets\images\html_skill_icon.png" />
+    </div>
+    <div class="skill-circle-container">
+      <img class="icon-skill" src="assets\images\redux_skill_icon.png" />
     </div>
   </div>
-  <a href="#contact">Contact</a>
 </div>
-
-<div style="padding:0 16px">
-  <h3>Subnav/dropdown menu inside a Navigation Bar</h3>
-  <p>Hover over the "about", "services" or "partners" link to see the sub navigation menu.</p>
-</div>
-
-</body>
-</html> -->

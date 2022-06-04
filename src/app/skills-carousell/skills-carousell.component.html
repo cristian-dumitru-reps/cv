@@ -1,6 +1,7 @@
 <!-- Left Side: Image / Right Side: Text -->
 <div class="left-navbar">
   <ul>
+    
     <li id="frontend" (click)="hideSubMenu($event)">
       <a href="#"><i class="fa fa-user fa-1.5x"></i> Frontend</a>
       <ul>
@@ -49,7 +50,7 @@
     <li id="uix" (click)="hideSubMenu($event)">
       <a href="#"><i class="fa fa-image fa-1.5x"></i> UI & UX</a>
       <ul>
-        <li (click)="selectPage($event)" style="margin: 15px 5px 5px -20px">
+        <li id="software" (click)="selectPage($event)" style="margin: 15px 5px 5px -20px">
           <a href="#"><i class="fa fa-user fa-1.5x"></i> Software</a>
         </li>
       </ul>
@@ -68,33 +69,17 @@
     <div class="road-map-line"></div>
   </div>
   <div class="paragraph">
-    <p class="section-title">Frontend</p>
+    <p class="section-title">{{skills_description[index_page].title}}</p>
     <p class="section-paragraph">
-      Writing things about me so you know how good I'm at pretending I'm doing
-      my job. So figo so beo so fotomodeo more ghesboro, Veneto-Rumeno in the
-    </p>
-    <p class="section-paragraph">
-      Writing things about me so you know how good I'm at pretending I'm doing
-      my job. So figo so beo so fotomodeo more ghesboro, Veneto-Rumeno in the
-      building che ti sviluppa anche tua madre <br />
-      Figa la descrizione di sto tizio, prima lo assumo poi lo denuncio.
+      {{skills_description[index_page].description}}
     </p>
   </div>
   <div class="road-map-container">
     <div style="margin: 15px 0px 15px 10px" class="road-map-line"></div>
   </div>
   <div class="skills-circle-container">
-    <div class="skill-circle-container">
-      <img class="icon-skill" src="assets\images\angular_skill_icon.png" />
-    </div>
-    <div class="skill-circle-container">
-      <img class="icon-skill" src="assets\images\react_skill_icon.png" />
-    </div>
-    <div class="skill-circle-container">
-      <img class="icon-skill" src="assets\images\html_skill_icon.png" />
-    </div>
-    <div class="skill-circle-container">
-      <img class="icon-skill" src="assets\images\redux_skill_icon.png" />
+    <div *ngFor="let skill of skills_description[index_page].icons" class="skill-circle-container">
+      <img class="icon-skill" src="assets\images\{{skill}}.png" />
     </div>
   </div>
 </div>

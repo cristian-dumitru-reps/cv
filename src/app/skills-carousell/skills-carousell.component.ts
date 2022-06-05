@@ -99,7 +99,16 @@ export class SkillsCarousellComponent implements OnInit {
     },
   ];
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    const frontendLi = document.getElementById('frontend');
+    if (frontendLi) frontendLi.children[1].className = 'nascosta';
+
+    const backendLi = document.getElementById('backend');
+    if (backendLi) backendLi.children[1].className = 'nascosta';
+
+    const uiLi = document.getElementById('uix');
+    if (uiLi) uiLi.children[1].className = 'nascosta';
+  }
 
   selectPage(event: any) {
     const objecto = document.getElementById(event.currentTarget.id);
@@ -152,23 +161,27 @@ export class SkillsCarousellComponent implements OnInit {
 
   hideSubMenu(event: any) {
     console.log('Entro con:' + event.currentTarget.id);
-    if (
-      event.currentTarget.id == 'frontend' ||
-      event.currentTarget.id == 'backend' ||
-      event.currentTarget.id == 'uix'
-    ) {
-      const objecto = document.getElementById(event.currentTarget.id);
 
-      if (objecto) {
-        console.log(objecto.children);
-        if (objecto.children[1].className == 'nascosta') {
-          objecto.children[1].className = 'mostra';
-        } else {
-          objecto.children[1].className = 'nascosta';
-        }
-        console.log(objecto.children[1]);
-        this.selectPage(event);
+    const objecto = document.getElementById(event.currentTarget.id);
+    const boxes = document.querySelectorAll('.mostra');
+    const boxess = document.querySelectorAll('.orange');
+
+    boxes.forEach((box) => {
+      box.className = 'nascosta';
+    });
+    boxess.forEach((box) => {
+      box.className = 'black';
+    });
+    if (objecto) {
+      if (objecto.children[1].className == 'nascosta') {
+        objecto.children[0].className = 'orange';
+        objecto.children[1].className = 'mostra';
+      } else {
+        objecto.children[0].className = 'black';
+        console.log('Tolo arancione a ' + objecto.children[0].className);
+        objecto.children[1].className = 'nascosta';
       }
+      this.selectPage(event);
     }
   }
 }

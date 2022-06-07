@@ -1,23 +1,24 @@
 <!-- Left Side: Image / Right Side: Text -->
+
 <div class="left-navbar">
   <ul>
-    
+    <span class="menu-title">Main quest</span>
     <li id="frontend" (click)="hideSubMenu($event)">
-      <a href="#"><i class="fa fa-user fa-1.5x"></i> Frontend</a>
+      <a href="#"><i data-feather="code"></i> Frontend</a>
       <ul>
         <li
           id="web"
           (click)="selectPage($event)"
           style="margin: 15px 5px 5px -20px"
         >
-          <a href="#"><i class="fa fa-user fa-1.5x"></i> Web</a>
+          <a href="#"><i data-feather="globe"></i> Web</a>
         </li>
         <li
           id="mobile"
           (click)="selectPage($event)"
           style="margin: 15px 5px 5px -20px"
         >
-          <a href="#"><i class="fa fa-mobile fa-1.5x"></i> Mobile</a>
+          <a href="#"><i data-feather="smartphone"></i> Mobile</a>
         </li>
         <li
           id="desktop"
@@ -29,29 +30,35 @@
       </ul>
     </li>
     <li id="backend" (click)="hideSubMenu($event)">
-      <a href="#"><i class="fa fa-user fa-1.5x"></i> Backend</a>
+      <a href="#"><i data-feather="terminal"></i> Backend</a>
       <ul>
         <li
           id="framework"
           (click)="selectPage($event)"
           style="margin: 15px 5px 5px -20px"
         >
-          <a href="#"><i class="fa fa-user fa-1.5x"></i> Framework</a>
+          <a href="#"><i data-feather="layers"></i> Framework</a>
         </li>
         <li
           id="database"
           (click)="selectPage($event)"
           style="margin: 15px 5px 5px -20px"
         >
-          <a href="#"><i class="fa fa-database fa-1.5x"></i> Database</a>
+          <a href="#"><i data-feather="database"></i> Database</a>
         </li>
       </ul>
     </li>
+
+    <span style="margin-top: 15px" class="menu-title">Side quest</span>
     <li id="uix" (click)="hideSubMenu($event)">
-      <a href="#"><i class="fa fa-image fa-1.5x"></i> UI & UX</a>
+      <a href="#"><i data-feather="grid"></i> UI & UX</a>
       <ul>
-        <li id="software" (click)="selectPage($event)" style="margin: 15px 5px 5px -20px">
-          <a href="#"><i class="fa fa-user fa-1.5x"></i> Software</a>
+        <li
+          id="software"
+          (click)="selectPage($event)"
+          style="margin: 15px 5px 5px -20px"
+        >
+          <a href="#"><i data-feather="figma"></i> Software</a>
         </li>
       </ul>
     </li>
@@ -59,27 +66,27 @@
       <a href="#"><i class="fa fa-user fa-1.5x"></i> Copywriting</a>
     </li>
     <li id="management" (click)="selectPage($event)">
-      <a href="#"><i class="fa fa-user fa-1.5x"></i> Management</a>
+      <a href="#"><i data-feather="pie-chart"></i> Management</a>
     </li>
-    <li id="marketing " (click)="selectPage($event)">
-      <a href="#"><i class="fa fa-user fa-1.5x"></i> Marketing</a>
+    <li id="marketing" (click)="selectPage($event)">
+      <a href="#"><i data-feather="instagram"></i> Marketing</a>
     </li>
   </ul>
   <div class="road-map-container">
     <div class="road-map-line"></div>
   </div>
   <div class="paragraph">
-    <p class="section-title">{{skills_description[index_page].title}}</p>
+    <p class="section-title">{{ skills_description[index_page].title }}</p>
     <p class="section-paragraph">
-      {{skills_description[index_page].description}}
+      {{ skills_description[index_page].description }}
     </p>
   </div>
-  <div class="road-map-container">
-    <div style="margin: 15px 0px 15px 10px" class="road-map-line"></div>
-  </div>
   <div class="skills-circle-container">
-    <div *ngFor="let skill of skills_description[index_page].icons" class="skill-circle-container">
-      <img class="icon-skill" src="assets\images\{{skill}}.png" />
+    <div
+      *ngFor="let skill of skills_description[index_page].icons"
+      class="skill-circle-container"
+    >
+      <img class="icon-skill" src="assets\images\{{ skill }}.png" />
     </div>
   </div>
 </div>

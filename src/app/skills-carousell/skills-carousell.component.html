@@ -63,10 +63,10 @@
       </ul>
     </li>
     <li id="copywriting" (click)="selectPage($event)">
-      <a href="#"><i class="fa fa-user fa-1.5x"></i> Copywriting</a>
+      <a href="#"><i data-feather="edit-2"></i> Copywriting</a>
     </li>
     <li id="management" (click)="selectPage($event)">
-      <a href="#"><i data-feather="pie-chart"></i> Management</a>
+      <a href="#"><i data-feather="bar-chart-2"></i> Management</a>
     </li>
     <li id="marketing" (click)="selectPage($event)">
       <a href="#"><i data-feather="instagram"></i> Marketing</a>
@@ -83,8 +83,10 @@
   </div>
   <div class="skills-circle-container">
     <div
+      (click)="onClickSkills($event)"
       *ngFor="let skill of skills_description[index_page].icons"
       class="skill-circle-container"
+      id="{{ skill }}"
     >
       <img class="icon-skill" src="assets\images\{{ skill }}.png" />
     </div>

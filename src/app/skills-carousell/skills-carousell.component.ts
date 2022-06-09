@@ -115,6 +115,10 @@ export class SkillsCarousellComponent implements OnInit {
     if (uiLi) uiLi.children[1].className = 'nascosta';
   }
 
+  onClickSkills(event: any):void{
+    console.log("Clickato su Skill:" + event.currentTarget.id);
+  }
+
   selectPage(event: any, trigger?:any) {
     const objecto = document.getElementById(event.currentTarget.id);
     if(!trigger){

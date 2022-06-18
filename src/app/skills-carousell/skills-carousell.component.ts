@@ -12,7 +12,60 @@ export class SkillsCarousellComponent implements OnInit {
     feather.replace();
   }
   index_page = 0;
+  skill_index_page = 0;
   constructor() {}
+  specific_skills = [
+    {
+      title: 'Angular',
+      description:
+        'Magnifica descrizione piena di stronzate per tentare di riempire un attimo la pagina dai.Magnifica descrizione piena di stronzate per tentare di riempire un attimo la pagina dai.',
+    },
+    {
+      title: 'React',
+      description:
+        'Magnifica descrizione piena di stronzate per tentare di riempire un attimo la pagina dai.Magnifica descrizione piena di stronzate per tentare di riempire un attimo la pagina dai.',
+    },
+    {
+      title: 'Redux',
+      description:
+        'Magnifica descrizione piena di stronzate per tentare di riempire un attimo la pagina dai.Magnifica descrizione piena di stronzate per tentare di riempire un attimo la pagina dai.',
+    },
+    {
+      title: 'Springboot',
+      description:
+        'Magnifica descrizione piena di stronzate per tentare di riempire un attimo la pagina dai.Magnifica descrizione piena di stronzate per tentare di riempire un attimo la pagina dai.',
+    },
+    {
+      title: 'Flutter',
+      description:
+        'Magnifica descrizione piena di stronzate per tentare di riempire un attimo la pagina dai.Magnifica descrizione piena di stronzate per tentare di riempire un attimo la pagina dai.',
+    },
+    {
+      title: 'Node',
+      description:
+        'Magnifica descrizione piena di stronzate per tentare di riempire un attimo la pagina dai.Magnifica descrizione piena di stronzate per tentare di riempire un attimo la pagina dai.',
+    },
+    {
+      title: 'NestJs',
+      description:
+        'Magnifica descrizione piena di stronzate per tentare di riempire un attimo la pagina dai.Magnifica descrizione piena di stronzate per tentare di riempire un attimo la pagina dai.',
+    },
+    {
+      title: 'Mongo',
+      description:
+        'Magnifica descrizione piena di stronzate per tentare di riempire un attimo la pagina dai.Magnifica descrizione piena di stronzate per tentare di riempire un attimo la pagina dai.',
+    },
+    {
+      title: 'SQL',
+      description:
+        'Magnifica descrizione piena di stronzate per tentare di riempire un attimo la pagina dai.Magnifica descrizione piena di stronzate per tentare di riempire un attimo la pagina dai.',
+    },
+    {
+      title: 'Figma',
+      description:
+        'Magnifica descrizione piena di stronzate per tentare di riempire un attimo la pagina dai.Magnifica descrizione piena di stronzate per tentare di riempire un attimo la pagina dai.',
+    },
+  ];
 
   skills_description = [
     {
@@ -106,7 +159,10 @@ export class SkillsCarousellComponent implements OnInit {
 
   ngOnInit(): void {
     const frontendLi = document.getElementById('frontend');
-    if (frontendLi) frontendLi.children[1].className = 'nascosta';
+    if (frontendLi){
+      frontendLi.children[1].className = 'mostra';
+      frontendLi.children[0].className = 'orange';
+    } 
 
     const backendLi = document.getElementById('backend');
     if (backendLi) backendLi.children[1].className = 'nascosta';
@@ -117,6 +173,43 @@ export class SkillsCarousellComponent implements OnInit {
 
   onClickSkills(event: any):void{
     console.log("Clickato su Skill:" + event.currentTarget.id);
+    const clicked_skill = event.currentTarget.id.replace("_skill_icon","");
+    console.log("Clickato su Skill:" + clicked_skill);
+    switch (clicked_skill) {
+      case 'angular':
+        this.skill_index_page = 0;
+        break;
+      case 'react':
+        this.skill_index_page = 1;
+        break;
+      case 'redux':
+        this.skill_index_page = 2;
+        break;
+      case 'spring':
+        this.skill_index_page = 3;
+        break;
+      case 'flutter':
+        this.skill_index_page = 4;
+        break;
+      case 'node':
+        this.skill_index_page = 5;
+        break;
+      case 'nestjs':
+        this.skill_index_page = 6;
+        break;
+      case 'mongo':
+        this.skill_index_page = 7;
+        break;
+      case 'sql':
+        this.skill_index_page = 8;
+        break;
+      case 'figma':
+        this.skill_index_page = 9;
+        break;
+      default:
+        this.skill_index_page = 0;
+        break;
+    }
   }
 
   selectPage(event: any, trigger?:any) {
@@ -142,10 +235,12 @@ export class SkillsCarousellComponent implements OnInit {
         break;
       case 'mobile':
         this.index_page = 2;
+        this.skill_index_page = 4;
         if(objecto) objecto.children[0].className = "orange";
         break;
       case 'desktop':
         this.index_page = 3;
+        this.skill_index_page = 0;
         if(objecto) objecto.children[0].className = "orange";
         break;
       case 'backend':
@@ -153,10 +248,12 @@ export class SkillsCarousellComponent implements OnInit {
         break;
       case 'framework':
         this.index_page = 5;
+        this.skill_index_page = 5;
         if(objecto) objecto.children[0].className = "orange";
         break;
       case 'database':
         this.index_page = 6;
+        this.skill_index_page = 7;
         if(objecto) objecto.children[0].className = "orange";
         break;
       case 'uix':
@@ -164,6 +261,8 @@ export class SkillsCarousellComponent implements OnInit {
         break;
       case 'software':
         this.index_page = 8;
+        this.skill_index_page = 9;
+
         if(objecto) objecto.children[0].className = "orange";
         break;
       case 'copywriting':

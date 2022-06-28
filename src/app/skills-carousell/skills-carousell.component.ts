@@ -17,53 +17,73 @@ export class SkillsCarousellComponent implements OnInit {
   specific_skills = [
     {
       title: 'Angular',
-      description:
-        'Magnifica descrizione piena di stronzate per tentare di riempire un attimo la pagina dai.Magnifica descrizione piena di stronzate per tentare di riempire un attimo la pagina dai.',
+      job_experience:
+        '40',
+      personal_experience:
+      '60',
     },
     {
       title: 'React',
-      description:
-        'Magnifica descrizione piena di stronzate per tentare di riempire un attimo la pagina dai.Magnifica descrizione piena di stronzate per tentare di riempire un attimo la pagina dai.',
+      job_experience:
+        '0',
+      personal_experience:
+      '100',
     },
     {
-      title: 'Redux',
-      description:
-        'Magnifica descrizione piena di stronzate per tentare di riempire un attimo la pagina dai.Magnifica descrizione piena di stronzate per tentare di riempire un attimo la pagina dai.',
+      title: 'Java',
+      job_experience:
+        '85',
+      personal_experience:
+      '15',
     },
     {
       title: 'Springboot',
-      description:
-        'Magnifica descrizione piena di stronzate per tentare di riempire un attimo la pagina dai.Magnifica descrizione piena di stronzate per tentare di riempire un attimo la pagina dai.',
+      job_experience:
+        '100',
+      personal_experience:
+      '0',
     },
     {
       title: 'Flutter',
-      description:
-        'Magnifica descrizione piena di stronzate per tentare di riempire un attimo la pagina dai.Magnifica descrizione piena di stronzate per tentare di riempire un attimo la pagina dai.',
+      job_experience:
+        '0',
+      personal_experience:
+      '100',
     },
     {
       title: 'Node',
-      description:
-        'Magnifica descrizione piena di stronzate per tentare di riempire un attimo la pagina dai.Magnifica descrizione piena di stronzate per tentare di riempire un attimo la pagina dai.',
+      job_experience:
+        '20',
+      personal_experience:
+      '80',
     },
     {
       title: 'NestJs',
-      description:
-        'Magnifica descrizione piena di stronzate per tentare di riempire un attimo la pagina dai.Magnifica descrizione piena di stronzate per tentare di riempire un attimo la pagina dai.',
+      job_experience:
+        '0',
+      personal_experience:
+      '100',
     },
     {
       title: 'Mongo',
-      description:
-        'Magnifica descrizione piena di stronzate per tentare di riempire un attimo la pagina dai.Magnifica descrizione piena di stronzate per tentare di riempire un attimo la pagina dai.',
+      job_experience:
+        '0',
+      personal_experience:
+      '100',
     },
     {
       title: 'SQL',
-      description:
-        'Magnifica descrizione piena di stronzate per tentare di riempire un attimo la pagina dai.Magnifica descrizione piena di stronzate per tentare di riempire un attimo la pagina dai.',
+      job_experience:
+        '70',
+      personal_experience:
+      '30',
     },
     {
       title: 'Figma',
-      description:
-        'Magnifica descrizione piena di stronzate per tentare di riempire un attimo la pagina dai.Magnifica descrizione piena di stronzate per tentare di riempire un attimo la pagina dai.',
+      job_experience:
+        '00',
+      personal_experience:
+      '100',
     },
   ];
 
@@ -80,7 +100,7 @@ export class SkillsCarousellComponent implements OnInit {
       icons: [
         'angular_skill_icon',
         'react_skill_icon',
-        'redux_skill_icon',
+        'java_skill_icon',
         'spring_skill_icon',
       ],
     },
@@ -99,7 +119,7 @@ export class SkillsCarousellComponent implements OnInit {
       icons: [
         'angular_skill_icon',
         'react_skill_icon',
-        'redux_skill_icon',
+        'java_skill_icon',
         'html_skill_icon',
       ],
     },
@@ -182,7 +202,7 @@ export class SkillsCarousellComponent implements OnInit {
       case 'react':
         this.skill_index_page = 1;
         break;
-      case 'redux':
+      case 'java':
         this.skill_index_page = 2;
         break;
       case 'spring':

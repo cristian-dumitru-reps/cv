@@ -20,13 +20,13 @@
         >
           <a href="#"><i data-feather="smartphone"></i> Mobile</a>
         </li>
-        <li
+        <!-- <li
           id="desktop"
           (click)="selectPage($event)"
           style="margin: 15px 5px 5px -20px"
         >
           <a href="#"><i class="fa fa-desktop fa-1.5x"></i> Desktop</a>
-        </li>
+        </li> -->
       </ul>
     </li>
     <li id="backend" (click)="hideSubMenu($event)">
@@ -77,16 +77,43 @@
   </div>
   <div style="display: flex; flex-direction: column">
     <div class="paragraph">
-      <p class="section-title">{{ skills_description[index_page].title }}</p>
+      <p class="section-title">
+        {{ skills_description[index_page].title }}
+      </p>
       <p class="section-paragraph">
         {{ skills_description[index_page].description }}
       </p>
     </div>
     <div *ngIf="skills_description[index_page].icons" class="paragraph">
-      <p class="section-title">{{ specific_skills[skill_index_page].title }}</p>
-      <p class="section-paragraph">
-        {{ specific_skills[skill_index_page].description }}
+      <p class="section-title">
+        Experience with {{ specific_skills[skill_index_page].title }}
       </p>
+      <!-- <p class="section-paragraph"> -->
+      <!-- First progress bar -->
+      <p>Learned from job experience</p>
+      <div class="progress">
+        <div
+          class="bar"
+          [style.width]="specific_skills[skill_index_page].job_experience + '%'"
+        >
+          <p class="percent">
+            {{ specific_skills[skill_index_page].job_experience }}%
+          </p>
+        </div>
+      </div>
+      <p>Learned from personal projects</p>
+      <div class="progress">
+        <div
+          class="bar"
+          [style.width]="
+            specific_skills[skill_index_page].personal_experience + '%'
+          "
+        >
+          <p class="percent">
+            {{ specific_skills[skill_index_page].personal_experience }}%
+          </p>
+        </div>
+      </div>
     </div>
   </div>
 

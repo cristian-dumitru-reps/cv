@@ -1,0 +1,16 @@
+.personality-container{
+    width: 95px;
+    height: 95px;
+    background-color: red;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    border-radius: 50%;
+    transition:2s;
+  }
+
+  .personality-container:hover{
+    transform: scale(1.8);
+  }
+  

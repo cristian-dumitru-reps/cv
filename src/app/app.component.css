@@ -22,8 +22,13 @@
 }
 .experiences-container {
   display: flex;
-  /* justify-content: center; */
   width: 950px;
   background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+}
+
+.personalities-container{
+  display: flex;
+  width: 950px;
   border-radius: 10px;
 }

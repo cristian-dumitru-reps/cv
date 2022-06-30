@@ -9,6 +9,7 @@ import { JobCardComponent } from './job-card/job-card.component';
 import { SkillsCarousellComponent } from './skills-carousell/skills-carousell.component';
 import { SkillsHeaderComponent } from './skills-header/skills-header.component';
 import { BouncingBallsComponent } from './bouncing-balls/bouncing-balls.component';
+import { PersonalitComponent } from './personalit/personalit.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { BouncingBallsComponent } from './bouncing-balls/bouncing-balls.componen
     JobCardComponent,
     SkillsCarousellComponent,
     SkillsHeaderComponent,
-    BouncingBallsComponent
+    BouncingBallsComponent,
+    PersonalitComponent
   ],
   imports: [
     BrowserModule,

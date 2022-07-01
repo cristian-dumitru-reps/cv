@@ -10,6 +10,8 @@ import { SkillsCarousellComponent } from './skills-carousell/skills-carousell.co
 import { SkillsHeaderComponent } from './skills-header/skills-header.component';
 import { BouncingBallsComponent } from './bouncing-balls/bouncing-balls.component';
 import { PersonalitComponent } from './personalit/personalit.component';
+import { ProjectsComponent } from './projects/projects.component';
+import { ChallengeComponent } from './challenge/challenge.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { PersonalitComponent } from './personalit/personalit.component';
     SkillsCarousellComponent,
     SkillsHeaderComponent,
     BouncingBallsComponent,
-    PersonalitComponent
+    PersonalitComponent,
+    ProjectsComponent,
+    ChallengeComponent
   ],
   imports: [
     BrowserModule,

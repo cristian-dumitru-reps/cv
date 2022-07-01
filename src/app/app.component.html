@@ -1,29 +1,57 @@
 <div class="header">
-  <!-- <app-logo-container></app-logo-container> -->
   <img src="assets\images\logo.png" class="header-logo" />
   <app-nav-bar></app-nav-bar>
 </div>
-<!-- <app-skills-header></app-skills-header> -->
-<!-- <app-skills-header></app-skills-header>
+<app-skills-header></app-skills-header>
 <div class="main-container">
   <div style="justify-content: center" class="experiences-container">
     <app-job-card [alignment]="0"></app-job-card>
   </div>
 </div>
-<br /> -->
+<br />
+
+<div class="main-container">
+  <div class="experiences-container">
+    <span class="experinces-title">My (stackoverflow) skills</span>
+  </div>
+</div>
+<br />
 <div class="main-container">
   <div class="experiences-container">
     <app-skills-carousell></app-skills-carousell>
   </div>
 </div>
+<br />
+
 <div class="main-container">
   <div class="experiences-container">
-    <p>Title boys</p>
+    <span class="experinces-title">My (unfinished) projects</span>
   </div>
 </div>
+<br />
+<div class="main-container">
+  <div class="personalities-container">
+    <app-projects></app-projects>
+  </div>
+</div>
+<br />
+
+<div class="main-container">
+  <div class="experiences-container">
+    <span class="experinces-title">About me</span>
+  </div>
+</div>
+<br />
 <div class="main-container">
   <div class="personalities-container">
     <app-personalit></app-personalit>
   </div>
 </div>
-<router-outlet></router-outlet>
+
+<div class="main-container">
+  <div style="justify-content: center" class="experiences-container">
+    <app-challenge></app-challenge>
+  </div>
+</div>
+
+<!-- <router-outlet></router-outlet> -->

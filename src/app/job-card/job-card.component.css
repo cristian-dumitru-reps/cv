@@ -3,6 +3,7 @@
   font-size: 35px;
   text-align: center;
   text-decoration: underline;
+  font-weight: 600;
   -webkit-text-decoration-color: orange; /* safari still uses vendor prefix */
   text-decoration-color: orange;
   margin: 20px 0px 50px 0px;
@@ -69,12 +70,13 @@
 .title {
   color: rgb(20, 20, 20);
   font-size: 25px;
-  text-align: center;
+  text-align: left;
+  font-weight: 600;
   text-decoration: underline;
   -webkit-text-decoration-color: orange; /* safari still uses vendor prefix */
   text-decoration-color: orange;
   margin: 0px 0px 10px 0px;
 }
 .paragraph {
-  text-align: center;
+  text-align: left;
 }

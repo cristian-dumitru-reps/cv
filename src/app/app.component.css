@@ -19,7 +19,6 @@
   display: flex;
   justify-content: center;
   margin: 00px 0px 0px 0px;
-
 }
 .experiences-container {
   display: flex;
@@ -33,7 +32,7 @@
   box-shadow: 0 0px 8px 0 rgba(87, 87, 87, 0.2);
 }
 
-.personalities-container{
+.personalities-container {
   display: flex;
   width: 950px;
   border-radius: 10px;
@@ -43,8 +42,10 @@
   font-size: 35px;
   text-align: center;
   text-decoration: underline;
+  font-weight: 600;
+
   -webkit-text-decoration-color: orange; /* safari still uses vendor prefix */
   text-decoration-color: orange;
-  margin-top:15px;
-  margin-bottom:15px;
+  margin-top: 15px;
+  margin-bottom: 15px;
 }
